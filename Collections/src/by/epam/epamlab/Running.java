@@ -44,8 +44,8 @@ public class Running {
 				System.out.println(word.getKey() + " -> " + word.getValue());
 			}
 			
-			findWord(words, "hello");
-			findWord(words, "hillo");
+			findWord("hello");
+			findWord("hillo");
 			
 		} catch (FileNotFoundException e) {
 			System.err.println("File not found!");
@@ -57,7 +57,7 @@ public class Running {
 		}		
 	}
 	//method to find word in map
-	private static int findWord(Map<String, Integer> words, String word) {
+	private static int findWord(String word) {
 		int count = 0;
 		String currentWord = word.toLowerCase();
 		if(words != null && !words.isEmpty() && word != null) {
