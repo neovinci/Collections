@@ -45,7 +45,9 @@ public class Running {
 			}
 			
 			findWord("hello");
-			findWord("hillo");
+			findWord("Hello");
+			findWord("Home");
+			
 			
 		} catch (FileNotFoundException e) {
 			System.err.println("File not found!");
@@ -60,11 +62,11 @@ public class Running {
 	private static int findWord(String word) {
 		int count = 0;
 		String currentWord = word.toLowerCase();
-		if(words != null && !words.isEmpty() && word != null) {
-			if(words.containsKey(currentWord)) {
-				count = words.get(currentWord);
-			}
+		
+		if(words.containsKey(currentWord)) {
+			count = words.get(currentWord);
 		}
+		
 		System.out.printf("\nThe word [%s] contains in current text %d time\n", word, count);
 		return count;
 	}
